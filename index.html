@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lights">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- my font outfit   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- login page tittle -->
+    <title>Job Tracker</title>
+
+    <!-- its my favicon link  -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <!-- tailwind+daisyUI   -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+            font-optical-sizing: auto;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="min-h-screen max-w-full bg-base-200 mx-auto">
+
+    <!-- it is the header section  -->
+
+    <header class="w-11/12 mx-auto">
+        <!-- header-1  -->
+            <h1 class="text-[32px] font-bold mb-2">Job Application Tracker</h1>
+
+            <!-- header-part-2  -->
+
+            <div class="grid grid-cols-3 gap-2.5 ">
+                <div class="bg-base-100 shadow p-5 rounded-[10px]">
+                    <p class="text-[14px]">Total</p>
+                    <p id="job-total" class="text-2xl font-bold">0</p>
+                </div>
+                <div class="bg-base-100 shadow p-5 rounded-[10px]">
+                    <p class="text-[14px]">Interview</p>
+                    <p id="job-interview" class="text-2xl font-bold text-green-600">0</p>
+                </div>
+                <div class="bg-base-100 shadow p-5 rounded-[10px]">
+                    <p class="text-[14px]">Rejected</p>
+                    <p id="job-rejected" class="text-2xl font-bold text-red-600">0</p>
+                </div>
+            </div>
+            
+    </header>
+
+    <!-- break-line  -->
+
+    <hr class="my-9 w-11/12 mx-auto opacity-10">
+
+    <!-- it is the main body  -->
+
+    <main class="w-11/12 mx-auto">
+        <!-- main body title  -->
+        <div class="mb-4 flex justify-between">
+            <div class="">
+                <h2 class=" text-2xl font-medium">Available Jobs </h2>
+            </div>
+            <div class="flex align-middle pr-1">
+                <p>8 Jobs</p>
+            </div>
+        </div>
+        <!-- all buttons are here  -->
+            <div class="flex gap-4 mb-4">
+                <button onclick="btnToggle('jobs-all-btn')" id="jobs-all-btn" class="btn bg-base-200 text-[12px] font-normal btn-neutral bg-blue-400 px-6">All</button>
+
+                <button onclick="btnToggle('jobs-interview-btn')" id="jobs-interview-btn" class="btn  bg-base-200 text-[12px] font-normal  px-6">Interview</button>
+
+                <button onclick="btnToggle('jobs-rejected-btn')" id="jobs-rejected-btn" class="btn bg-base-200 text-[12px] font-normal  px-6">Rejected</button>
+            </div>
+
+            <!-- job card section here  -->
+
+            <section id="all-jobs-card" class="space-y-4 pb-12">
+                <!-- full card div | card-1 -->
+                <div class="bg-base-200 p-6 shadow rounded-2xl">
+                    <!-- card div section 1 & 2 -->
+                    <div class="flex justify-between">
+                        <!-- card div section-1 -->
+                         <div class="space-y-5">
+                            <div class="">
+                                <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
+                                <p class="text-[16px] text-gray-400">React Native Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            </div>
+                            <div class="">
+                                <div class="bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED</div>
+                                <p class="text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            </div>
+                            <!-- card button  -->
+                            <div class="flex gap-2">
+                                <!-- btn-  -->
+                                 <div id="card-interview-btn" class="inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">INTERVIEW</div>
+                                 <!-- btn-2  -->
+                                 <div id="card-rejected-btn" class="inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">REJECTED</div>
+                            </div>
+                         </div>
+                         <!-- card div section-2  -->
+                          <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
+                            <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                          </div>
+
+                    </div>
+                </div>
+
+                <!-- full card div | card-2 -->
+                <div class="bg-base-200 p-6 shadow rounded-2xl">
+                    <!-- card div section 1 & 2 -->
+                    <div class="flex justify-between">
+                        <!-- card div section-1 -->
+                         <div class="space-y-5">
+                            <div class="">
+                                <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
+                                <p class="text-[16px] text-gray-400">React Native Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            </div>
+                            <div class="">
+                                <div class="bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED</div>
+                                <p class="text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            </div>
+                            <!-- card button  -->
+                            <div class="flex gap-2">
+                                <!-- btn-  -->
+                                 <div id="card-interview-btn" class="inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">INTERVIEW</div>
+                                 <!-- btn-2  -->
+                                 <div id="card-rejected-btn" class="inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">REJECTED</div>
+                            </div>
+                         </div>
+                         <!-- card div section-2  -->
+                          <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
+                            <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                          </div>
+
+                    </div>
+                </div>
+
+                <!-- full card div | card-3 -->
+                <div class="bg-base-200 p-6 shadow rounded-2xl">
+                    <!-- card div section 1 & 2 -->
+                    <div class="flex justify-between">
+                        <!-- card div section-1 -->
+                         <div class="space-y-5">
+                            <div class="">
+                                <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
+                                <p class="text-[16px] text-gray-400">React Native Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            </div>
+                            <div class="">
+                                <div class="bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED</div>
+                                <p class="text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            </div>
+                            <!-- card button  -->
+                            <div class="flex gap-2">
+                                <!-- btn-  -->
+                                 <div id="card-interview-btn" class="inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">INTERVIEW</div>
+                                 <!-- btn-2  -->
+                                 <div id="card-rejected-btn" class="inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">REJECTED</div>
+                            </div>
+                         </div>
+                         <!-- card div section-2  -->
+                          <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
+                            <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                          </div>
+
+                    </div>
+                </div>
+
+                <!-- full card div | card-4 -->
+                <div class="bg-base-200 p-6 shadow rounded-2xl">
+                    <!-- card div section 1 & 2 -->
+                    <div class="flex justify-between">
+                        <!-- card div section-1 -->
+                         <div class="space-y-5">
+                            <div class="">
+                                <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
+                                <p class="text-[16px] text-gray-400">React Native Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            </div>
+                            <div class="">
+                                <div class="bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED</div>
+                                <p class="text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            </div>
+                            <!-- card button  -->
+                            <div class="flex gap-2">
+                                <!-- btn-  -->
+                                 <div id="card-interview-btn" class="inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">INTERVIEW</div>
+                                 <!-- btn-2  -->
+                                 <div id="card-rejected-btn" class="inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">REJECTED</div>
+                            </div>
+                         </div>
+                         <!-- card div section-2  -->
+                          <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
+                            <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                          </div>
+
+                    </div>
+                </div>
+
+                <!-- full card div | card-5 -->
+                <div class="bg-base-200 p-6 shadow rounded-2xl">
+                    <!-- card div section 1 & 2 -->
+                    <div class="flex justify-between">
+                        <!-- card div section-1 -->
+                         <div class="space-y-5">
+                            <div class="">
+                                <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
+                                <p class="text-[16px] text-gray-400">React Native Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            </div>
+                            <div class="">
+                                <div class="bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED</div>
+                                <p class="text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            </div>
+                            <!-- card button  -->
+                            <div class="flex gap-2">
+                                <!-- btn-  -->
+                                 <div id="card-interview-btn" class="inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">INTERVIEW</div>
+                                 <!-- btn-2  -->
+                                 <div id="card-rejected-btn" class="inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">REJECTED</div>
+                            </div>
+                         </div>
+                         <!-- card div section-2  -->
+                          <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
+                            <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                          </div>
+
+                    </div>
+                </div>
+
+                <!-- full card div | card-6 -->
+                <div class="bg-base-200 p-6 shadow rounded-2xl">
+                    <!-- card div section 1 & 2 -->
+                    <div class="flex justify-between">
+                        <!-- card div section-1 -->
+                         <div class="space-y-5">
+                            <div class="">
+                                <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
+                                <p class="text-[16px] text-gray-400">React Native Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            </div>
+                            <div class="">
+                                <div class="bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED</div>
+                                <p class="text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            </div>
+                            <!-- card button  -->
+                            <div class="flex gap-2">
+                                <!-- btn-  -->
+                                 <div id="card-interview-btn" class="inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">INTERVIEW</div>
+                                 <!-- btn-2  -->
+                                 <div id="card-rejected-btn" class="inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">REJECTED</div>
+                            </div>
+                         </div>
+                         <!-- card div section-2  -->
+                          <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
+                            <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                          </div>
+
+                    </div>
+                </div>
+
+                <!-- full card div | card-7 -->
+                <div class="bg-base-200 p-6 shadow rounded-2xl">
+                    <!-- card div section 1 & 2 -->
+                    <div class="flex justify-between">
+                        <!-- card div section-1 -->
+                         <div class="space-y-5">
+                            <div class="">
+                                <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
+                                <p class="text-[16px] text-gray-400">React Native Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            </div>
+                            <div class="">
+                                <div class="bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED</div>
+                                <p class="text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            </div>
+                            <!-- card button  -->
+                            <div class="flex gap-2">
+                                <!-- btn-  -->
+                                 <div id="card-interview-btn" class="inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">INTERVIEW</div>
+                                 <!-- btn-2  -->
+                                 <div id="card-rejected-btn" class="inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">REJECTED</div>
+                            </div>
+                         </div>
+                         <!-- card div section-2  -->
+                          <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
+                            <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                          </div>
+
+                    </div>
+                </div>
+                <!-- full card div | card-8 -->
+                <div class="bg-base-200 p-6 shadow rounded-2xl">
+                    <!-- card div section 1 & 2 -->
+                    <div class="flex justify-between">
+                        <!-- card div section-1 -->
+                         <div class="space-y-5">
+                            <div class="">
+                                <h2 class="text-[18px] font-bold">Mobile First Corp</h2>
+                                <p class="text-[16px] text-gray-400">React Native Developer</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            </div>
+                            <div class="">
+                                <div class="bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED</div>
+                                <p class="text-[14px]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            </div>
+                            <!-- card button  -->
+                            <div class="flex gap-2">
+                                <!-- btn-  -->
+                                 <div id="card-interview-btn" class="inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">INTERVIEW</div>
+                                 <!-- btn-2  -->
+                                 <div id="card-rejected-btn" class="inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">REJECTED</div>
+                            </div>
+                         </div>
+                         <!-- card div section-2  -->
+                          <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
+                            <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                          </div>
+
+                    </div>
+                </div>
+            </section>
+        
+    </main>
+
+    <!-- connect script.js file  -->
+     <script src="js script/script.js"></script>
+
+     <!-- machin.js file  -->
+      <script src="js script/machine.js"></script>
+
+</body>
+
+</html>
