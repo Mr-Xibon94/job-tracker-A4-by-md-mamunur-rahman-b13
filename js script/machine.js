@@ -48,6 +48,9 @@ function btnToggle(id) {
     selectedBtn.classList.add('bg-blue-400', 'text-white');
 }
 
+
+// add functionality with interview button 
+
 maniContainer.addEventListener('click', function(event){
     if(event.target.classList.contains('card-interview-btn')) {
         const parentNode = event.target.parentNode.parentNode;
@@ -77,6 +80,44 @@ maniContainer.addEventListener('click', function(event){
         if(!interviewExist) {
             interviewList.push(jobCardInfo);
         }
+
+        // removing from rejectedList 
+        rejectedList = rejectedList.filter(item => item.jobTitle != jobCardInfo.jobTitle)
+
+        jobCalculation();
+
+    } else if (event.target.classList.contains('card-rejected-btn')) {
+        const parentNode = event.target.parentNode.parentNode;
+        
+        const jobTitle = parentNode.querySelector('.jobTitle').innerText;
+         console.log(jobTitle);
+        const jobTag = parentNode.querySelector('.jobTag').innerText;
+        // console.log(jobTag); 
+        const jobAbout = parentNode.querySelector('.jobAbout').innerText;
+        const jobStatus = parentNode.querySelector('.jobStatus').innerText;
+        const jobNotes = parentNode.querySelector('.jobNotes').innerText;
+
+        parentNode.querySelector('.jobStatus').innerText = 'Rejected'; 
+        const jobCardInfo = {
+            jobTitle,
+            jobTitle,
+            jobTag,
+            jobAbout,
+            jobStatus,
+            jobNotes,
+        }
+
+        // console.log(jobCardInfo); 
+
+        const rejectedExist = rejectedList.find(item => item.jobTitle == jobCardInfo.jobTitle) ;
+
+        if(!rejectedExist) {
+            rejectedList.push(jobCardInfo);
+            }
+
+            interviewExist = interviewList.filter(item => item.jobTitle != jobCardInfo.jobTitle)
+
+         jobCalculation();
 
     }
 })
