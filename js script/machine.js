@@ -9,6 +9,7 @@ let totalInterview = document.getElementById('job-interview');
 let totalRejected = document.getElementById('job-rejected')
 
 // main card body section is called here 
+const noJobCard = document.getElementById('noJobsCard');
 const allCardSection = document.getElementById('all-jobs-card');
 const maniContainer = document.querySelector('main');
 const cardFilterSection = document.getElementById('filtered-section');
@@ -49,17 +50,32 @@ function btnToggle(id) {
     // select button 
     const selectedBtn = document.getElementById(id);
     selectedBtn.classList.add('bg-blue-400', 'text-white');
+    
     // add hide and show function 
     if (id == 'jobs-interview-btn') {
         allCardSection.classList.add('hidden');
         cardFilterSection.classList.remove('hidden')
+
+        if(interviewList.length==0) {
+            noJobCard.classList.remove('hidden');
+        }else if(interviewList.length>0) {
+            noJobCard.classList.add('hidden');
+        }
+        
         renderInterview()
     } else if (id == 'jobs-all-btn') {
         allCardSection.classList.remove('hidden');
         cardFilterSection.classList.add('hidden');
+        noJobCard.classList.add('hidden');
     } else if (id == 'jobs-rejected-btn') {
         allCardSection.classList.add('hidden');
         cardFilterSection.classList.remove('hidden');
+
+        if(rejectedList.length==0) {
+            noJobCard.classList.remove('hidden');
+        }else if(rejectedList.length>0) {
+            noJobCard.classList.add('hidden');
+        }
         renderRejection()
     }
 }

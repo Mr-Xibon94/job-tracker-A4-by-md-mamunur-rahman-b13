@@ -91,13 +91,33 @@
                 class="btn bg-base-200 text-[12px] font-normal  px-6">Rejected</button>
         </div>
 
-        <section id="filtered-section" class="hidden space-y-4 pb-12">
+        <!-- NO JOBS AVAILABLE CARD  -->
+        <section id="noJobsCard" class="hidden pb-12">
+
+            <div class="bg-base-200 p-6 shadow rounded-2xl py-20">
+                <div class="text-[60px] text-center"><i class="fa-regular fa-file-lines"></i></div>
+                <div class=" text-center">
+                    <h2 class="text-2xl">No Jobs Available</h2>
+                    <p class="text-[16px] text-gray-400">Check back soon for new job opportunities</p>
+                </div>
+            </div>
 
         </section>
 
+        
+        <!-- Array of job cards  -->
+        <section id="filtered-section" class="hidden space-b-4 pb-12">
+
+        </section>
+
+
+
         <!-- job card section here  -->
 
-        <section id="all-jobs-card" class="space-y-4 pb-12">
+        <section id="all-jobs-card" class=" space-y-4 pb-12">
+
+
+
             <!-- full card div | card-1 -->
             <div class="bg-base-200 p-6 shadow rounded-2xl">
                 <!-- card div section 1 & 2 -->
@@ -105,28 +125,32 @@
                     <!-- card div section-1 -->
                     <div class="space-y-5">
                         <div class="">
-                            <h2 class="jobTitle text-[18px] font-bold">Mobile First Corp</h2>
-                            <p class="jobTag text-[16px] text-gray-400">React Native Developer</p>
+                            <h2 class="jobTitle text-[18px] font-bold">Walton</h2>
+                            <p class="jobTag text-[16px] text-gray-400">Senior Frontend Developer</p>
                         </div>
                         <div>
-                            <p class="jobAbout text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            <p class="jobAbout text-[14px] text-gray-400">Dhaka, Bangladesh | CA
+                                •
+                                Full-time
+                                •
+                                $40,000 - $60,000</p>
                         </div>
                         <div class="">
                             <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED
                             </div>
-                            <p class="jobNotes text-[14px]">Build cross-platform mobile applications using React Native.
-                                Work on
-                                products used by millions of users worldwide.</p>
+                            <p class="jobNotes text-[14px]">We are looking for an experienced Frontend Developer to
+                                build scalable web applications using React and TypeScript. You will work with a
+                                talented team on cutting-edge projects.</p>
                         </div>
                         <!-- card button  -->
                         <div class="flex gap-2">
                             <!-- btn-  -->
                             <div
-                                class="card-interview-btn inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">
+                                class="card-interview-btn inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px] cursor-pointer">
                                 INTERVIEW</div>
                             <!-- btn-2  -->
                             <div
-                                class="card-rejected-btn inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">
+                                class="card-rejected-btn inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px] cursor-pointer">
                                 REJECTED</div>
                         </div>
                     </div>
@@ -145,18 +169,21 @@
                     <!-- card div section-1 -->
                     <div class="space-y-5">
                         <div class="">
-                            <h2 class="jobTitle text-[18px] font-bold">WebFlow Agency</h2>
-                            <p class="jobTag text-[16px] text-gray-400">Web Designer & Developer</p>
+                            <h2 class="jobTitle text-[18px] font-bold">Innovation Labs</h2>
+                            <p class="jobTag text-[16px] text-gray-400">UI/UX Engineer</p>
                         </div>
                         <div>
-                            <p class="jobAbout text-[14px] text-gray-400">
-                                Los Angeles, CA • Part-time $80,000 - $120,000
-                            </p>
+                            <p class="jobAbout text-[14px] text-gray-400">Austin, TX
+                                •
+                                Full-time
+                                •
+                                $110,000 - $150,000</p>
                         </div>
                         <div class="">
                             <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED
                             </div>
-                            <p class="jobNotes text-[14px]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                            <p class="jobNotes text-[14px]">Create beautiful and functional user interfaces for our
+                                suite of products. Strong design skills and frontend development expertise required.</p>
                         </div>
                         <!-- card button  -->
                         <div class="flex gap-2">
@@ -185,18 +212,22 @@
                     <!-- card div section-1 -->
                     <div class="space-y-5">
                         <div class="">
-                            <h2 class="jobTitle text-[18px] font-bold">Mobile First Corp</h2>
-                            <p class="jobTag text-[16px] text-gray-400">React Native Developer</p>
+                            <h2 class="jobTitle text-[18px] font-bold">MegaCorp Solutions</h2>
+                            <p class="jobTag text-[16px] text-gray-400">JavaScript Developer</p>
                         </div>
                         <div>
-                            <p class="jobAbout text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            <p class="jobAbout text-[14px] text-gray-400">New York, NY
+                                •
+                                Full-time
+                                •
+                                $130,000 - $170,00</p>
                         </div>
                         <div class="">
                             <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED
                             </div>
-                            <p class="jobNotes text-[14px]">Build cross-platform mobile applications using React Native.
-                                Work on
-                                products used by millions of users worldwide.</p>
+                            <p class="jobNotes text-[14px]">Build enterprise applications with JavaScript and modern
+                                frameworks. We offer competitive compensation, health insurance, and professional
+                                development opportunities.</p>
                         </div>
                         <!-- card button  -->
                         <div class="flex gap-2">
@@ -217,6 +248,7 @@
 
                 </div>
             </div>
+
 
             <!-- full card div | card-4 -->
             <div class="bg-base-200 p-6 shadow rounded-2xl">
@@ -225,18 +257,19 @@
                     <!-- card div section-1 -->
                     <div class="space-y-5">
                         <div class="">
-                            <h2 class="jobTitle text-[18px] font-bold">Mobile First Corp</h2>
-                            <p class="jobTag text-[16px] text-gray-400">React Native Developer</p>
+                            <h2 class="jobTitle text-[18px] font-bold">WebFlow Agency</h2>
+                            <p class="jobTag text-[16px] text-gray-400">Web Designer & Developer</p>
                         </div>
                         <div>
-                            <p class="jobAbout text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            <p class="jobAbout text-[14px] text-gray-400">
+                                Los Angeles, CA • Part-time $80,000 - $120,000
+                            </p>
                         </div>
                         <div class="">
                             <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED
                             </div>
-                            <p class="jobNotes text-[14px]">Build cross-platform mobile applications using React Native.
-                                Work on
-                                products used by millions of users worldwide.</p>
+                            <p class="jobNotes text-[14px]">Create stunning web experiences for high-profile clients.
+                                Must have portfolio and experience with modern web design trends.</p>
                         </div>
                         <!-- card button  -->
                         <div class="flex gap-2">
@@ -258,25 +291,29 @@
                 </div>
             </div>
 
-            <!-- full card div | card-5 -->
+            <!-- full card div | card-5-->
             <div class="bg-base-200 p-6 shadow rounded-2xl">
                 <!-- card div section 1 & 2 -->
                 <div class="flex justify-between">
                     <!-- card div section-1 -->
                     <div class="space-y-5">
                         <div class="">
-                            <h2 class="jobTitle text-[18px] font-bold">Mobile First Corp</h2>
-                            <p class="jobTag text-[16px] text-gray-400">React Native Developer</p>
+                            <h2 class="jobTitle text-[18px] font-bold">DataViz Solutions</h2>
+                            <p class="jobTag text-[16px] text-gray-400">Data Visualization Specialist</p>
                         </div>
                         <div>
-                            <p class="jobAbout text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            <p class="jobAbout text-[14px] text-gray-400">
+                                Boston, MA • Full-time • $125,000 - $165,000
+
+                            </p>
                         </div>
                         <div class="">
                             <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED
                             </div>
-                            <p class="jobNotes text-[14px]">Build cross-platform mobile applications using React Native.
-                                Work on
-                                products used by millions of users worldwide.</p>
+                            <p class="jobNotes text-[14px]">
+                                Transform complex data into compelling visualizations. Required skills: D3.js, React,
+                                and strong analytical thinking.
+                            </p>
                         </div>
                         <!-- card button  -->
                         <div class="flex gap-2">
@@ -305,18 +342,23 @@
                     <!-- card div section-1 -->
                     <div class="space-y-5">
                         <div class="">
-                            <h2 class="jobTitle text-[18px] font-bold">Mobile First Corp</h2>
-                            <p class="jobTag text-[16px] text-gray-400">React Native Developer</p>
+                            <h2 class="jobTitle text-[18px] font-bold">CloudFirst Inc</h2>
+                            <p class="jobTag text-[16px] text-gray-400">Backend Developer</p>
                         </div>
                         <div>
-                            <p class="jobAbout text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            <p class="jobAbout text-[14px] text-gray-400">
+                                Seattle, WA
+                                •
+                                Full-time
+                                •
+                                $140,000 - $190,000
+                            </p>
                         </div>
                         <div class="">
                             <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED
                             </div>
-                            <p class="jobNotes text-[14px]">Build cross-platform mobile applications using React Native.
-                                Work on
-                                products used by millions of users worldwide.</p>
+                            <p class="jobNotes text-[14px]">Design and maintain scalable backend systems using Python
+                                and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                         </div>
                         <!-- card button  -->
                         <div class="flex gap-2">
@@ -338,7 +380,7 @@
                 </div>
             </div>
 
-            <!-- full card div | card-7 -->
+            <!-- full card div | card-7-->
             <div class="bg-base-200 p-6 shadow rounded-2xl">
                 <!-- card div section 1 & 2 -->
                 <div class="flex justify-between">
@@ -378,25 +420,31 @@
                 </div>
             </div>
 
-            <!-- full card div | card-8 -->
+
+
+            <!-- full card div | card-8-->
             <div class="bg-base-200 p-6 shadow rounded-2xl">
                 <!-- card div section 1 & 2 -->
                 <div class="flex justify-between">
                     <!-- card div section-1 -->
                     <div class="space-y-5">
                         <div class="">
-                            <h2 class="jobTitle text-[18px] font-bold">Mobile First Corp</h2>
-                            <p class="jobTag text-[16px] text-gray-400">React Native Developer</p>
+                            <h2 class="jobTitle text-[18px] font-bold">StartupXYZ</h2>
+                            <p class="jobTag text-[16px] text-gray-400">Full Stack Engineer</p>
                         </div>
                         <div>
-                            <p class="jobAbout text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
+                            <p class="jobAbout text-[14px] text-gray-400">Remote
+                                •
+                                Full-time
+                                •
+                                $120,000 - $160,000</p>
                         </div>
                         <div class="">
                             <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED
                             </div>
-                            <p class="jobNotes text-[14px]">Build cross-platform mobile applications using React Native.
-                                Work on
-                                products used by millions of users worldwide.</p>
+                            <p class="jobNotes text-[14px]">Join our fast-growing startup and work on our core platform.
+                                Experience with Node.js and React required. Great benefits and equity package included.
+                            </p>
                         </div>
                         <!-- card button  -->
                         <div class="flex gap-2">
@@ -418,45 +466,7 @@
                 </div>
             </div>
 
-            <!-- full card div | card-9 -->
-            <div class="bg-base-200 p-6 shadow rounded-2xl">
-                <!-- card div section 1 & 2 -->
-                <div class="flex justify-between">
-                    <!-- card div section-1 -->
-                    <div class="space-y-5">
-                        <div class="">
-                            <h2 class="jobTitle text-[18px] font-bold">Mobile First Corp</h2>
-                            <p class="jobTag text-[16px] text-gray-400">React Native Developer</p>
-                        </div>
-                        <div>
-                            <p class="jobAbout text-[14px] text-gray-400">Remote . Full-time . $130,000-$175,000</p>
-                        </div>
-                        <div class="">
-                            <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">NOT APPLIED
-                            </div>
-                            <p class="jobNotes text-[14px]">Build cross-platform mobile applications using React Native.
-                                Work on
-                                products used by millions of users worldwide.</p>
-                        </div>
-                        <!-- card button  -->
-                        <div class="flex gap-2">
-                            <!-- btn-  -->
-                            <div
-                                class="card-interview-btn inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">
-                                INTERVIEW</div>
-                            <!-- btn-2  -->
-                            <div
-                                class="card-rejected-btn inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">
-                                REJECTED</div>
-                        </div>
-                    </div>
-                    <!-- card div section-2  -->
-                    <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
-                        <button class=""><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
 
-                </div>
-            </div>
 
         </section>
 
