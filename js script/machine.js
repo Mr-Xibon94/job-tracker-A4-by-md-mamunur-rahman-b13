@@ -85,7 +85,7 @@ maniContainer.addEventListener('click', function (event) {
             jobTitle,
             jobTag,
             jobAbout,
-            jobStatus,
+            jobStatus:'Interview',
             jobNotes,
         }
 
@@ -124,7 +124,7 @@ maniContainer.addEventListener('click', function (event) {
             jobTitle,
             jobTag,
             jobAbout,
-            jobStatus,
+            jobStatus:'Rejected',
             jobNotes,
         }
 
