@@ -293,7 +293,7 @@ function renderRejection() {
                     <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
                         <button class=""><i class="fa-solid fa-trash-can"></i></button>
                     </div>
-
+            </d>
         `
         cardFilterSection.appendChild(div);
     }
