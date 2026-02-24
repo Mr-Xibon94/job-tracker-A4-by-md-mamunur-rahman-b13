@@ -219,7 +219,7 @@ function renderInterview() {
         div.className = "flex justify-between bg-base-200 p-6 shadow rounded-2xl"
 
         div.innerHTML = `
-        <div class="space-y-5">
+        <div class="space-y-5 mb-[20px]">
                         <div class="">
                             <h2 class="jobTitle text-[18px] font-bold">${interviews.jobTitle}</h2>
                             <p class="jobTag text-[16px] text-gray-400">${interviews.jobTag}</p>
@@ -265,7 +265,7 @@ function renderRejection() {
         div.className = "flex justify-between bg-base-200 p-6 shadow rounded-2xl"
 
         div.innerHTML = `
-        <div class="space-y-5">
+        <div class="space-y-5 mb-[20px]">
                         <div class="">
                             <h2 class="jobTitle text-[18px] font-bold">${reject.jobTitle}</h2>
                             <p class="jobTag text-[16px] text-gray-400">${reject.jobTag}</p>
