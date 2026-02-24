@@ -14,13 +14,18 @@ const allCardSection = document.getElementById('all-jobs-card');
 const maniContainer = document.querySelector('main');
 const cardFilterSection = document.getElementById('filtered-section');
 
+// delete buttons 
+// const cardDltBtn = document.getElementById('.card-dlt-btn'); 
+
 // toggle buttons
 const btnAll = document.getElementById('jobs-all-btn');
 const btnInterview = document.getElementById('jobs-interview-btn');
 const btnRejected = document.getElementById('jobs-rejected-btn');
 
+// job available diplay section 
+ total.innerText = allCardSection.children.length;
 function jobCalculation() {
-    total.innerText = allCardSection.children.length;
+   
     totalInterview.innerText = interviewList.length;
     totalRejected.innerText = rejectedList.length;
 
@@ -85,6 +90,7 @@ function btnToggle(id) {
 
 maniContainer.addEventListener('click', function (event) {
     if (event.target.classList.contains('card-interview-btn')) {
+        
         const parentNode = event.target.parentNode.parentNode;
 
         const jobTitle = parentNode.querySelector('.jobTitle').innerText;
@@ -157,14 +163,39 @@ maniContainer.addEventListener('click', function (event) {
         interviewList = interviewList.filter(item => item.jobTitle != jobCardInfo.jobTitle);
 
 
+
+        // if(cardDltBtn.addEventListener('click', function() {
+        //     console.log('hi');
+        //     rejectedList = rejectedList.filter(item => item.jobTitle != jobCardInfo.jobTitle)
+        // }))
+
+        // if (event.target.classList.contains('card-dlt-btn')){
+
+        //     console.log(445)
+        //     interviewList = interviewList.filter(item => item.jobTitle != jobCardInfo.jobTitle);
+        //     if (currentStatus == "jobs-interview-btn") {
+        //     renderInterview();
+        // }
+        // jobCalculation()
+        // }
+
+
         // after remove call in render function 
         if (currentStatus == "jobs-interview-btn") {
+
             renderInterview();
         }
 
 
         jobCalculation()
 
+    }else if(event.target.classList.contains('card-dlt-btn')){
+        console.log(54654);
+        const parentNode = event.target.parentNode.parentNode.parentNode.parentNode;
+        // console.log(parentNode);
+        parentNode.classList.add('hidden');
+
+        total.innerText=total.innerText-1;
     }
 })
 
