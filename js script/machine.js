@@ -23,9 +23,9 @@ const btnInterview = document.getElementById('jobs-interview-btn');
 const btnRejected = document.getElementById('jobs-rejected-btn');
 
 // job available diplay section 
- total.innerText = allCardSection.children.length;
+total.innerText = allCardSection.children.length;
 function jobCalculation() {
-   
+
     totalInterview.innerText = interviewList.length;
     totalRejected.innerText = rejectedList.length;
 
@@ -55,18 +55,18 @@ function btnToggle(id) {
     // select button 
     const selectedBtn = document.getElementById(id);
     selectedBtn.classList.add('bg-blue-400', 'text-white');
-    
+
     // add hide and show function 
     if (id == 'jobs-interview-btn') {
         allCardSection.classList.add('hidden');
         cardFilterSection.classList.remove('hidden')
 
-        if(interviewList.length==0) {
+        if (interviewList.length == 0) {
             noJobCard.classList.remove('hidden');
-        }else if(interviewList.length>0) {
+        } else if (interviewList.length > 0) {
             noJobCard.classList.add('hidden');
         }
-        
+
         renderInterview()
     } else if (id == 'jobs-all-btn') {
         allCardSection.classList.remove('hidden');
@@ -76,9 +76,9 @@ function btnToggle(id) {
         allCardSection.classList.add('hidden');
         cardFilterSection.classList.remove('hidden');
 
-        if(rejectedList.length==0) {
+        if (rejectedList.length == 0) {
             noJobCard.classList.remove('hidden');
-        }else if(rejectedList.length>0) {
+        } else if (rejectedList.length > 0) {
             noJobCard.classList.add('hidden');
         }
         renderRejection()
@@ -90,7 +90,7 @@ function btnToggle(id) {
 
 maniContainer.addEventListener('click', function (event) {
     if (event.target.classList.contains('card-interview-btn')) {
-        
+
         const parentNode = event.target.parentNode.parentNode;
 
         const jobTitle = parentNode.querySelector('.jobTitle').innerText;
@@ -107,7 +107,7 @@ maniContainer.addEventListener('click', function (event) {
             jobTitle,
             jobTag,
             jobAbout,
-            jobStatus:'Interview',
+            jobStatus: 'Interview',
             jobNotes,
         }
 
@@ -147,7 +147,7 @@ maniContainer.addEventListener('click', function (event) {
             jobTitle,
             jobTag,
             jobAbout,
-            jobStatus:'Rejected',
+            jobStatus: 'Rejected',
             jobNotes,
         }
 
@@ -187,20 +187,17 @@ maniContainer.addEventListener('click', function (event) {
             renderInterview();
         }
 
-        
-        jobCalculation()
 
-    }else if(event.target.classList.contains('card-dlt-btn')){
+        jobCalculation();
+
+    } else if (event.target.classList.contains('card-dlt-btn')) {
         console.log(54654);
         const parentNode = event.target.parentNode.parentNode.parentNode.parentNode;
         // console.log(parentNode);
 
         parentNode.classList.add('hidden')
-if (currentStatus == "jobs-all-btn"){
-    total.innerText=total.innerText-1;
+        total.innerText = total.innerText - 1
 
-}
-        
     }
 })
 
@@ -235,17 +232,17 @@ function renderInterview() {
                         <div class="flex gap-2">
                             <!-- btn-  -->
                             <div
-                                class="card-interview-btn inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">
+                                class="card-interview-btn inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px] cursor-pointer">
                                 INTERVIEW</div>
                             <!-- btn-2  -->
                             <div
-                                class="card-rejected-btn inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">
+                                class="card-rejected-btn inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px] cursor-pointer">
                                 REJECTED</div>
                         </div>
                     </div>
                     <!-- card div section-2  -->
                     <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
-                        <button class=""><i class="card-dlt-btn fa-solid fa-trash-can"></i></button>
+                        <button class=""><i class="fa-solid fa-trash-can"></i></button>
                     </div>
 
         `
@@ -281,17 +278,17 @@ function renderRejection() {
                         <div class="flex gap-2">
                             <!-- btn-  -->
                             <div
-                                class="card-interview-btn inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px]">
+                                class="card-interview-btn inline-block font-medium text-[14px] text-green-600 border border-green-600 p-2 rounded-[5px] cursor-pointer">
                                 INTERVIEW</div>
                             <!-- btn-2  -->
                             <div
-                                class="card-rejected-btn inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px]">
+                                class="card-rejected-btn inline-block font-medium text-[14px] text-red-600 border border-red-600 p-2 rounded-[5px] cursor-pointer">
                                 REJECTED</div>
                         </div>
                     </div>
                     <!-- card div section-2  -->
                     <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
-                        <button class=""><i class="card-dlt-btn fa-solid fa-trash-can"></i></button>
+                        <button class=""><i class="fa-solid fa-trash-can"></i></button>
                     </div>
 
         `
