@@ -216,7 +216,7 @@ function renderInterview() {
 
 
         let div = document.createElement('div');
-        div.className = "flex justify-between bg-base-200 p-6 shadow rounded-2xl"
+        div.className = "flex justify-between bg-base-200 p-6 shadow rounded-2xl space-y-5"
 
         div.innerHTML = `
         <div class="space-y-5">
@@ -262,7 +262,7 @@ function renderRejection() {
 
 
         let div = document.createElement('div');
-        div.className = "flex justify-between bg-base-200 p-6 shadow rounded-2xl"
+        div.className = "flex justify-between bg-base-200 p-6 shadow rounded-2xl space-y-5"
 
         div.innerHTML = `
         <div class="space-y-5">
