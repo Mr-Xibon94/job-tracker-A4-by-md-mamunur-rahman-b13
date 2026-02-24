@@ -228,7 +228,7 @@ function renderInterview() {
                             <p class="jobAbout text-[14px] text-gray-400">${interviews.jobAbout}</p>
                         </div>
                         <div class="">
-                            <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">${interviews.jobStatus}</div>
+                            <div class="jobStatus bg-gray-200 inline-block border border-green-600 text-green-600 py-2 px-2.5 text-[14px] mb-2">${interviews.jobStatus}</div>
                             <p class="jobNotes text-[14px]">${interviews.jobNotes}</p>
                         </div>
                         <!-- card button  -->
@@ -274,7 +274,7 @@ function renderRejection() {
                             <p class="jobAbout text-[14px] text-gray-400">${reject.jobAbout}</p>
                         </div>
                         <div class="">
-                            <div class="jobStatus bg-gray-200 inline-block py-2 px-2.5 text-[14px] mb-2">${reject.jobStatus}</div>
+                            <div class="jobStatus bg-gray-200 inline-block border border-green-600 text-green-600 py-2 px-2.5 text-[14px] mb-2">${reject.jobStatus}</div>
                             <p class="jobNotes text-[14px]">${reject.jobNotes}</p>
                         </div>
                         <!-- card button  -->
