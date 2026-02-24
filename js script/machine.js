@@ -127,6 +127,7 @@ maniContainer.addEventListener('click', function (event) {
             renderRejection();
         }
 
+
         jobCalculation();
 
     } else if (event.target.classList.contains('card-rejected-btn')) {
@@ -186,21 +187,25 @@ maniContainer.addEventListener('click', function (event) {
             renderInterview();
         }
 
-
+        
         jobCalculation()
 
     }else if(event.target.classList.contains('card-dlt-btn')){
         console.log(54654);
         const parentNode = event.target.parentNode.parentNode.parentNode.parentNode;
         // console.log(parentNode);
-        parentNode.classList.add('hidden');
 
-        total.innerText=total.innerText-1;
+        parentNode.classList.add('hidden')
+if (currentStatus == "jobs-all-btn"){
+    total.innerText=total.innerText-1;
+
+}
+        
     }
 })
 
 
-// interview section create 
+// interview render section create 
 function renderInterview() {
 
 
@@ -240,7 +245,7 @@ function renderInterview() {
                     </div>
                     <!-- card div section-2  -->
                     <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
-                        <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                        <button class=""><i class="card-dlt-btn fa-solid fa-trash-can"></i></button>
                     </div>
 
         `
@@ -286,7 +291,7 @@ function renderRejection() {
                     </div>
                     <!-- card div section-2  -->
                     <div class="w-[40px] h-[40px] border border-gray-400 p-1.5 rounded-[100%] text-center">
-                        <button class=""><i class="fa-solid fa-trash-can"></i></button>
+                        <button class=""><i class="card-dlt-btn fa-solid fa-trash-can"></i></button>
                     </div>
 
         `
