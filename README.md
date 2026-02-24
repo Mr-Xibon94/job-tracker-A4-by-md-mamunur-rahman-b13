@@ -33,4 +33,5 @@
 # 5. What is the difference between preventDefault() and stopPropagation() methods?
 
 -> preventDefault(); will stop self activities like(form submit, link redirect) of an element.
+
 -> stopPropagation(); method of the Event interface prevents further propagation of the current event in the capturing and bubbling phases. similar-> stopImmediatePropagation(); 
