@@ -7,6 +7,7 @@ let currentStatus = 'all';
 let total = document.getElementById('job-total');
 let totalInterview = document.getElementById('job-interview');
 let totalRejected = document.getElementById('job-rejected')
+let availableJobs = document.getElementById('availableJobs');
 
 // main card body section is called here 
 const noJobCard = document.getElementById('noJobsCard');
@@ -24,6 +25,7 @@ const btnRejected = document.getElementById('jobs-rejected-btn');
 
 // job available diplay section 
 total.innerText = allCardSection.children.length;
+availableJobs.innerText = allCardSection.children.length;
 function jobCalculation() {
 
     totalInterview.innerText = interviewList.length;
@@ -196,7 +198,8 @@ maniContainer.addEventListener('click', function (event) {
         // console.log(parentNode);
 
         parentNode.classList.add('hidden')
-        total.innerText = total.innerText - 1
+        total.innerText = total.innerText - 1;
+        availableJobs.innerHTML = availableJobs.innerText - 1;
 
     }
 })
